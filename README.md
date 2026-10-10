@@ -1,7 +1,7 @@
 
-# Minecraft Server 2.0
+# Minecraft Server panel 2.0
 
-A Minecraft server 2.0 is an application or program that allows you to install and subsequently run a Minecraft server.
+A Minecraft server panel 2.0 is an application or program that allows you to install and subsequently run a Minecraft server.
 
 
 ## Authors
