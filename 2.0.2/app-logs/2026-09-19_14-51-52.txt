@@ -1,3 +1,0 @@
-[2026-09-19 14:51:52] [INFO]: [Start] Hello!
-[2026-09-19 14:51:52] [INFO]: [Start] Server is installed
-[2026-09-19 14:51:52] [INFO]: [Ending] Goodbye!

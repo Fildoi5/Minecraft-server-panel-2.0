@@ -1,7 +1,0 @@
-[2026-09-26 10:09:37] [INFO]: [Start] Hello!
-[2026-09-26 10:09:37] [INFO]: [Start] Server is installed
-[2026-09-26 10:09:37] [INFO]: [Web] Web is running on: http://127.0.0.1:1000
-[2026-09-26 10:09:45] [INFO]: [Web] Password: 1234
-[2026-09-26 10:09:45] [INFO]: [Web] Username: admin
-[2026-09-26 10:09:45] [INFO]: [Web] users: {'admin': 'b6ea11b61742e0d9d9fcf2decc4a85af'}
-[2026-09-26 10:09:48] [INFO]: [Ending] Goodbye!

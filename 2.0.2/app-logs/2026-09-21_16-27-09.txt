@@ -1,2 +1,0 @@
-[2026-09-21 16:27:09] [INFO]: [Start] Hello!
-[2026-09-21 16:27:09] [INFO]: [Ending] Goodbye!

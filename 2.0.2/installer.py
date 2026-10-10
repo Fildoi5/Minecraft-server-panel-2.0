@@ -14,32 +14,27 @@ import logging_module
 
 class Installer:
     def __init__(self):
+        self.logger= logging_module.Logging(True, self.get_logs_from_logger) # Logging object
+        self.logs = "" # Logs variable
 
-        self.logger= logging_module.Logging(True, self.get_logs_from_logger)
-        self.logs = ""
+        self.config = self.load_config() # Configuration file
+        self.dependencies = self.load_dependencies() # Dependencies file
 
+        self.java_path = "" # Java path
 
-        self.config = self.load_config()
-        self.dependencies = self.load_dependencies()
-
-        self.java_path = ""
-
-        self.app = Flask(__name__, static_folder='installer_web/static',template_folder='installer_web/templates')
-        self.server = create_server(self.app, host="127.0.0.1", port=80)
-        self.logger.write("Installer-web is running on: http://127.0.0.1:80", "INFO", "Installer-web")
-
-
+        self.app = Flask(__name__, static_folder='installer_web/static',template_folder='installer_web/templates') # Flask object
+        self.server = create_server(self.app, host="127.0.0.1", port=80) # Waitress object
+        self.logger.write("Installer-web is running on: http://127.0.0.1:80", "INFO", "Installer-web") # Write to the log
 
         self.declare_url()
 
 
 
-
+    # Run web server
     def run(self):
         self.server.run()
 
-        # self.app.run(port=5000)
-
+    # Load config
     def load_config(self):
         self.logger.write("Loading config file", "INFO", "Config")
         try:
@@ -47,8 +42,8 @@ class Installer:
                 return json.load(raw_file)
         except Exception as e:
             self.logger.write(f"Loading config failed: {e}", "ERROR", "Config")
-            sys.exit()
 
+    # Load dependencies
     def load_dependencies(self):
         self.logger.write("Loading dependencies file", "INFO", "Dependencies")
         try:
@@ -56,7 +51,6 @@ class Installer:
                 return json.load(raw_file)
         except Exception as e:
             self.logger.write(f"Loading dependencies failed: {e}", "ERROR", "Dependencies")
-            sys.exit()
 
     def declare_url(self):
         self.app.add_url_rule("/", view_func=self.main)
@@ -68,11 +62,11 @@ class Installer:
 
     @staticmethod
     def main():
-        return render_template("main.html")
+        return render_template("main.html") # Render main page
 
     @staticmethod
     def install():
-        return render_template("install.html")
+        return render_template("install.html") # Render logs page
 
     def get_data(self):
         with open("dependencies.json", "r") as raw_file:
@@ -80,12 +74,12 @@ class Installer:
 
 
     def get_logs(self):
-        return self.logs, 200
+        return self.logs, 200 # Return logs
 
     def post_data(self):
-        self.logger.write(f"Requested data are: {request.data}", "DEBUG", "Web-installer")
-        thread = threading.Thread(target=self.install_server, args=[request.json,request.data,])
-        thread.start()
+        self.logger.write(f"Posted data are: {request.data}", "DEBUG", "Web-installer")
+        thread = threading.Thread(target=self.install_server, args=[request.json,]) # Create thread
+        thread.start() # Run thread
         return "", 200
 
     def post_icon(self):
@@ -99,25 +93,27 @@ class Installer:
     def get_logs_from_logger(self, logs):
         self.logs += logs + "\n"
 
-    def install_server(self, json,data):
-        time.sleep(2)
-        if data is not None: #not
-            jdata = json
-            self.logs = ""
-            name = jdata["name"].replace(" ", "_")
+    def install_server(self, data):
+        time.sleep(2) # Wait 2 seconds
+        if data is not None:
+            self.logs = "" # Logs
+            name = data.get("name").replace(" ", "_") # Server name
 
+            # Install Java
             for i in self.dependencies["java"]:
-                if jdata["java"] in i["version"]:
-                    obj = install_java.InstallJava(self.logger, self.config["java_path"], i[sys.platform])
-                    obj.download_java()
-                    self.java_path = obj.get_java_directory()
+                if data.get("java") in i["version"]:
+                    obj = install_java.InstallJava(self.logger, self.config["java_path"], i[sys.platform]) # Create Java installer obj
+                    obj.download_java() # Download Java
+                    self.java_path = obj.get_java_directory() # Gets the Java path
 
-            for i in self.dependencies["modloader"][jdata["modloader"]]:
-                if jdata["version"] in i["version"]:
-                    install_server.InstallServer(i["url"],os.path.join(self.config["server_path"],name),self.logger, self.java_path,i["install_command"], i,name, jdata["ram"])
-                    os.kill(os.getpid(), signal.SIGILL)
 
-            self.logger.write(f"The Java version is not in the posted data: {jdata}", "WARN", "Web-installer")
+            # Install MC Server
+            for version in self.dependencies["modloader"][data.get("modloader")]:
+                if data.get("version") in version["version"]:
+                    install_server.InstallServer(version["url"],os.path.join(self.config["server_path"],name),self.logger, self.java_path,version["install_command"],name, data.get("ram"),data.get("motd"),data.get("ip"))
+                    os.kill(os.getpid(), signal.SIGILL) # Kill install web
+
+            self.logger.write(f"The Java version is not in the posted data: {data}", "WARN", "Web-installer")
 
 
 

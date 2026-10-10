@@ -1,12 +1,9 @@
-log = "ahoj"
+RED = '\033[31m'
+GREEN = '\033[32m'
+YELLOW = '\033[33m'
+RESET = '\033[0m'
 
-logs_str = "a\nb\nc\n"
-
-list = logs_str.split("\n")
-
-logs_str = ""
-list.pop(0)
-for log in list:
-    logs_str += log + "\n"
-
-print(logs_str)
+print(RED + "red" + RESET)
+print(GREEN + "green" + RESET)
+print(YELLOW + "yellow" + RESET)
+print("ahoj")

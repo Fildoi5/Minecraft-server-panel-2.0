@@ -1,4 +1,0 @@
-[2026-10-08 16:32:12] [INFO]: [Start] Hello!
-[2026-10-08 16:32:12] [INFO]: [Start] Server is installed
-[2026-10-08 16:32:12] [INFO]: [Server Data] Loading server data file
-[2026-10-08 16:32:13] [INFO]: [Web] Web is running on: http://127.0.0.1:80

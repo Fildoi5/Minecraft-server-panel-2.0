@@ -1,6 +1,5 @@
 import json
 import threading
-import sys
 import random
 import time
 
@@ -14,8 +13,8 @@ import run
 class Web:
     def __init__(self):
 
-        self.logger= logging_module.Logging(True, self.get_logs_from_logger)
-        self.logs_str = ""
+        self.logger= logging_module.Logging(True, self.get_logs_from_logger, "Minecraft") # Logger object
+        self.logs_str = "" # Logs
 
         self.status = {
             "status" : "OFFLINE",
@@ -26,7 +25,7 @@ class Web:
         self.usage_p = threading.Thread(target=self.get_usage)
         self.usage_p.start()
 
-        self.server_data = self.load_server_data()
+        self.server_data = self.load_server_data() # Load server data
 
         self.users = {
 
@@ -42,10 +41,11 @@ class Web:
         self.declare_url()
 
 
-
+    # Run waitress server
     def run(self):
         self.server.run()
 
+    # Load dependencies
     def load_dependencies(self):
         self.logger.write("Loading dependencies file", "INFO", "Dependencies")
         try:
@@ -53,17 +53,18 @@ class Web:
                 return json.load(raw_file)
         except Exception as e:
             self.logger.write(f"Loading dependencies failed: {e}", "ERROR", "Dependencies")
-            sys.exit()
 
+    # Load server data
     def load_server_data(self):
         self.logger.write("Loading server data file", "INFO", "Server Data")
         try:
-            with open("servers.json", "r") as raw_file:
+            with open("server.json", "r") as raw_file:
                 return json.load(raw_file)
         except Exception as e:
             self.logger.write(f"Loading server data failed: {e}", "ERROR", "Server Data")
-            sys.exit()
 
+
+    # Measures RAM and CPU usage
     def get_usage(self):
         while True:
 
@@ -71,7 +72,7 @@ class Web:
             self.status["cpu"] = cpu + "%"
             self.status["ram"] = str(psutil.virtual_memory().percent) + "%"
 
-            time.sleep(1)
+            time.sleep(1) # Wait 1 second
 
     def declare_url(self):
         self.app.add_url_rule("/", view_func=self.main)
@@ -87,11 +88,10 @@ class Web:
 
     def get_logs_from_logger(self, logs):
 
-
         list = self.logs_str.split("\n")
         if len(list) > 100:
             self.logs_str = ""
-            list.pop(0)
+            list.pop(0) # Deletes the first item from the list
             for log in list:
                 self.logs_str += log + "\n"
             self.logs_str += logs
@@ -100,25 +100,25 @@ class Web:
 
 
     def main(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
-            return render_template("main.html")
-        return redirect("/login")
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
+            return render_template("main.html") # Render main page
+        return redirect("/login") # Redirect to login page
 
     def logs(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
             return render_template("logs.html")
-        return redirect("/login")
+        return redirect("/login") # Redirect to login page
 
 
     def stats(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
             return render_template("stats.html")
-        return redirect("/login")
+        return redirect("/login") # Redirect to login page
 
     def settings(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
             return render_template("settings.html")
-        return redirect("/login")
+        return redirect("/login") # Redirect to login page
 
     def login(self):
         msg = ''
@@ -126,13 +126,15 @@ class Web:
             username = request.form['username']
             password = request.form['password']
 
-            self.logger.write(f"Password: {password}", "INFO", "Web")
-            self.logger.write(f"Username: {username}", "INFO", "Web")
+            self.logger.write(f"Password: {password}", "DEBUG", "Web")
+            self.logger.write(f"Username: {username}", "DEBUG", "Web")
 
             if username == "admin" and password == "1234":
-                hash = "%032x" % random.getrandbits(128)
+                hash = "%032x" % random.getrandbits(128) # Create random hash
                 self.users["admin"] = hash
-                self.logger.write(f"users: {self.users}", "INFO", "Web")
+
+                self.logger.write(f"Users: {self.users}", "DEBUG", "Web")
+
                 session['id'] = hash
                 session['username'] = "admin"
                 return redirect(url_for("main"))
@@ -142,26 +144,26 @@ class Web:
         return render_template('login.html', msg=msg)
 
     def post_power(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
 
             self.status["status"] = self.run_server_obj.toogle_run()
             return "", 200
-        return "", 401
+        return "", 401 # Return code 401
 
     def post_write(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
             self.run_server_obj.write(request.data)
 
             return "", 200
-        return "", 401
+        return "", 401 # Return code 401
 
     def get_data(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
             return json.dumps(self.status), 200
-        return "", 401
+        return "", 401 # Return code 401
 
     def get_logs(self):
-        if session.get("id") == self.users.get("admin") and session.get("id") is not None:
-            return self.logs_str, 200
-        return "", 401
+        if session.get("id") == self.users.get("admin") and session.get("id") is not None: # Verifies whether the user is logged in.
+            return self.logs_str, 200 # Return logs
+        return "", 401 # Return code 401
 

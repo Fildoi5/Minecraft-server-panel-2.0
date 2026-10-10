@@ -1,4 +1,0 @@
-[2026-09-26 09:33:06] [INFO]: [Start] Hello!
-[2026-09-26 09:33:06] [INFO]: [Start] Server is installed
-[2026-09-26 09:33:06] [INFO]: [Web] Web is running on: http://127.0.0.1:80
-[2026-09-26 09:34:23] [INFO]: [Ending] Goodbye!

@@ -6,10 +6,6 @@ document.getElementById("logs_icon").addEventListener("click", function(){
     window.location.replace("logs");
 })
 
-document.getElementById("stats_icon").addEventListener("click", function(){
-    window.location.replace("stats");
-})
-
 document.getElementById("settings_icon").addEventListener("click", function(){
     window.location.replace("settings");
 })

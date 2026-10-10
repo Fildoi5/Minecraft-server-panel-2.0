@@ -7,21 +7,19 @@ import installer
 import web
 import multiprocessing
 
-
-
 class Main:
     def __init__(self):
-        self.logger = logging_module.Logging(True, None)
+        self.logger = logging_module.Logging(True)
         self.logger.write("Hello!", "INFO", "Start")
 
-        atexit.register(self.exit_handler)
-
+        atexit.register(self.exit_handler) # Set
 
         self.installer_process = multiprocessing.Process(target=self.run_installer)
         self.web_process = multiprocessing.Process(target=self.run_web)
         self.check_installation()
+
     def check_installation(self):
-        if os.path.exists("servers.json"):
+        if os.path.exists("server.json"):
             self.logger.write("Server is installed", "INFO", "Start")
             self.web_process.run()
             self.web_process.join()
