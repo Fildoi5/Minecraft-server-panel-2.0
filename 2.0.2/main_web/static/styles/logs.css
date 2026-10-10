@@ -1,0 +1,51 @@
+#logs{
+    border: 1px solid rgb(131, 123, 123);
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    width: calc(100vw - 100px - 60px - 22px - 100px);
+    height: 80vh;
+}
+
+#search_part{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#send{
+    background-color: #144272;
+    border: 1px solid grey;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    width: 50px;
+    height: 40px;
+    outline: none;
+}
+
+#send:hover{
+    filter: opacity(80%);
+    border-color: #2C74B3;
+}
+
+#send img{
+    object-fit: none;
+}
+
+#command{
+    width: calc(100vw - 100px - 60px - 22px - 100px - 52px);
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: #144272;
+    color: white;
+    outline: none;
+}
+
+#command:hover{
+    border-color: #2C74B3;
+}
+

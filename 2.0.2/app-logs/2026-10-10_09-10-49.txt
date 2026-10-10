@@ -1,0 +1,33 @@
+[2026-10-10 09:10:49] [INFO]: [Start] Hello!
+[2026-10-10 09:10:49] [INFO]: [Start] Server is installed
+[2026-10-10 09:10:49] [INFO]: [Server Data] Loading server data file
+[2026-10-10 09:10:49] [INFO]: [Web] Web is running on: http://127.0.0.1:80
+[2026-10-10 09:11:04] [INFO]: [Web] Password: 1234
+[2026-10-10 09:11:04] [INFO]: [Web] Username: admin
+[2026-10-10 09:11:04] [INFO]: [Web] users: {'admin': 'b2e6ea3bf5e57a33603cd003fb425374'}
+[2026-10-10 09:11:08] [INFO]: [Run] Running server
+[2026-10-10 09:11:08] [INFO]: [Run] Running server jar from: 'C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java\jdk-27\bin\java.exe'
+[2026-10-10 09:11:08] [INFO]: [Minecraft] Starting net.minecraft.server.Main
+[2026-10-10 09:11:09] [INFO]: [Minecraft] WARNING: A restricted method in java.lang.System has been called
+[2026-10-10 09:11:09] [INFO]: [Minecraft] WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/filip/Documents/minecraft-allverisions/minecraft-server-2.0/servers/d/libraries/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar)
+[2026-10-10 09:11:09] [INFO]: [Minecraft] WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[2026-10-10 09:11:09] [INFO]: [Minecraft] WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[2026-10-10 09:11:09] [INFO]: [Minecraft] 
+[2026-10-10 09:11:11] [INFO]: [Minecraft] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[2026-10-10 09:11:11] [INFO]: [Minecraft] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/filip/Documents/minecraft-allverisions/minecraft-server-2.0/servers/d/libraries/org/joml/joml/1.10.9/joml-1.10.9.jar)
+[2026-10-10 09:11:11] [INFO]: [Minecraft] WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe
+[2026-10-10 09:11:11] [INFO]: [Minecraft] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[2026-10-10 09:11:17] [INFO]: [Minecraft] [09:11:17] [ServerMain/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[2026-10-10 09:11:19] [INFO]: [Minecraft] [09:11:19] [Worker-Main-11/INFO]: Loaded 1866 advancements
+[2026-10-10 09:11:20] [INFO]: [Minecraft] [09:11:20] [Server thread/INFO]: Starting minecraft server version 26.3
+[2026-10-10 09:11:20] [INFO]: [Minecraft] [09:11:20] [Server thread/INFO]: Loading properties
+[2026-10-10 09:11:20] [INFO]: [Minecraft] [09:11:20] [Server thread/INFO]: Default game type: SURVIVAL
+[2026-10-10 09:11:20] [INFO]: [Minecraft] [09:11:20] [Server thread/INFO]: Generating keypair
+[2026-10-10 09:11:20] [INFO]: [Minecraft] [09:11:20] [Server thread/INFO]: Starting Minecraft server on *:25565
+[2026-10-10 09:11:20] [INFO]: [Minecraft] [09:11:20] [Server thread/INFO]: Preparing level "world"
+[2026-10-10 09:11:21] [INFO]: [Minecraft] [09:11:21] [Server thread/INFO]: Loading 0 persistent chunks...
+[2026-10-10 09:11:21] [INFO]: [Minecraft] [09:11:21] [Server thread/INFO]: Preparing spawn area: 100%
+[2026-10-10 09:11:21] [INFO]: [Minecraft] [09:11:21] [Server thread/INFO]: Time elapsed: 21 ms
+[2026-10-10 09:11:22] [INFO]: [Run] Shutting down server
+[2026-10-10 09:11:22] [INFO]: [Minecraft] [09:11:22] [Server thread/INFO]: Done (2.112s)! For help, type "help"
+[2026-10-10 09:11:24] [INFO]: [Run] Shutting down server

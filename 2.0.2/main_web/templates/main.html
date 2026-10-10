@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/main_page.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <main>
+        <div id="menu">
+            <img class="menu_icon"   id="menu_icon" src="/static/img/menu_icon.png" alt="">
+            <img class="menu_icon"   id="logs_icon" src="/static/img/terminal.png" alt="">
+            <img class="menu_icon"   id="stats_icon" src="/static/img/monitoring.png" alt="">
+            <img class="menu_icon"   id="settings_icon" src="/static/img/settings.png" alt="">
+        </div>
+
+        <div id="content">
+            <h2>Minecraft Server</h2>
+            <div class="container">
+                <div>
+                    <h3 style="display: inline-block;">Status: </h3>
+                    <span id="status">OFFLINE</span>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div>
+                    <h3 style="display: inline-block;">Ram usage: </h3>
+                    <span id="ram">0%</span>
+                </div>
+                <div>
+                    <h3 style="display: inline-block;">Cpu usage: </h3>
+                    <span id="cpu">0%</span>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <button id="powerbutton" onclick="post_power()">Power</button>
+
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="/static/scritps/main.js"></script>
+    <script src="/static/scritps/main_page.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+[2026-09-19 16:42:58] [INFO]: [Start] Hello!
+[2026-09-19 16:42:58] [WARN]: [Start] Server is not installed
+[2026-09-19 16:42:58] [DEBUG]: [Start] ['C:\\Users\\filip\\Documents\\minecraft-allverisions\\minecraft-server-2.0\\.venv\\Scripts\\waitress-serve.exe', '--host', '127.0.0.1', '--call', 'installer:run']
+[2026-09-19 16:42:58] [INFO]: [Config] Loading config file
+[2026-09-19 16:42:58] [INFO]: [Dependencies] Loading dependencies file
+[2026-09-19 16:43:08] [DEBUG]: [Web-installer] Requested data are: b'{"modloader":"vanilla","version":"Minecraft 26.3","ram":"1.0","java":"Openjdk Java SE 27","name":"d","motd":"d","onlinemod":"True","ip":"d"}'
+[2026-09-19 16:43:26] [INFO]: [Ending] Goodbye!

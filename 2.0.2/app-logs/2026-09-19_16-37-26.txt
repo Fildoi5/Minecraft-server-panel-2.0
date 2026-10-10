@@ -1,0 +1,18 @@
+[2026-09-19 16:37:26] [INFO]: [Start] Hello!
+[2026-09-19 16:37:26] [WARN]: [Start] Server is not installed
+[2026-09-19 16:37:26] [DEBUG]: [Start] ['C:\\Users\\filip\\Documents\\minecraft-allverisions\\minecraft-server-2.0\\.venv\\Scripts\\waitress-serve.exe', '--host', '127.0.0.1', '--call', 'installer:run']
+[2026-09-19 16:37:26] [INFO]: [Config] Loading config file
+[2026-09-19 16:37:26] [INFO]: [Dependencies] Loading dependencies file
+[2026-09-19 16:37:34] [DEBUG]: [Web-installer] Requested data are: b'{"modloader":"vanilla","version":"Minecraft 26.3","ram":"1.0","java":"Openjdk Java SE 27","name":"d","motd":"d","onlinemod":"True","ip":"d"}'
+[2026-09-19 16:37:34] [INFO]: [Installer-Java] Creating java directory: C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java
+[2026-09-19 16:37:34] [INFO]: [Installer-Java] Creating java directory is successful.
+[2026-09-19 16:37:34] [INFO]: [Installer-Java] Downloading java from: 'https://download.java.net/openjdk/jdk27/ri/openjdk-27+35_windows-x64_bin.zip'
+[2026-09-19 16:37:52] [INFO]: [Installer-Java] Downloading java is successful.
+[2026-09-19 16:37:52] [INFO]: [Installer-Java] Extracting java
+[2026-09-19 16:37:54] [INFO]: [Installer-Java] Extracting java is successful.
+[2026-09-19 16:37:54] [INFO]: [Installer-Java] Deleting java zip file
+[2026-09-19 16:37:54] [INFO]: [Installer-Java] Deleting java zip file is successful.
+[2026-09-19 16:37:54] [DEBUG]: [Installer-Java] Folder is: C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java
+[2026-09-19 16:37:54] [DEBUG]: [Installer-Java] All folders ('C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java'): ['jdk-27']
+[2026-09-19 16:37:54] [DEBUG]: [Installer-Java] Folder of java is: 'C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java\jdk-27'
+[2026-09-19 16:38:38] [INFO]: [Ending] Goodbye!

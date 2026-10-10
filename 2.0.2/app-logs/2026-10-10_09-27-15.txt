@@ -1,0 +1,28 @@
+[2026-10-10 09:27:15] [INFO]: [Start] Hello!
+[2026-10-10 09:27:15] [INFO]: [Start] Server is installed
+[2026-10-10 09:27:15] [INFO]: [Server Data] Loading server data file
+[2026-10-10 09:27:15] [INFO]: [Web] Web is running on: http://127.0.0.1:80
+[2026-10-10 09:27:21] [INFO]: [Web] Password: 1234
+[2026-10-10 09:27:21] [INFO]: [Web] Username: admin
+[2026-10-10 09:27:21] [INFO]: [Web] users: {'admin': '00993f35d2347f34aa15b6033590140d'}
+[2026-10-10 09:27:22] [INFO]: [Run] Running server
+[2026-10-10 09:27:22] [INFO]: [Run] Running server jar from: 'C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java\jdk-27\bin\java.exe'
+[2026-10-10 09:27:23] [INFO]: [Minecraft] Starting net.minecraft.server.Main
+[2026-10-10 09:27:24] [INFO]: [Minecraft] WARNING: A restricted method in java.lang.System has been called
+[2026-10-10 09:27:24] [INFO]: [Minecraft] WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/filip/Documents/minecraft-allverisions/minecraft-server-2.0/servers/d/libraries/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar)
+[2026-10-10 09:27:24] [INFO]: [Minecraft] WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+[2026-10-10 09:27:24] [INFO]: [Minecraft] WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+[2026-10-10 09:27:24] [INFO]: [Minecraft] 
+[2026-10-10 09:27:24] [INFO]: [Run] Shutting down server
+[2026-10-10 09:27:24] [INFO]: [Run] Writing to server console
+[2026-10-10 09:27:25] [INFO]: [Minecraft] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[2026-10-10 09:27:33] [INFO]: [Run] Shutting down server
+[2026-10-10 09:27:33] [INFO]: [Run] Writing to server console
+[2026-10-10 09:27:33] [ERROR]: [Run] Writing to server console failed: write to closed file
+[2026-10-10 09:27:51] [INFO]: [Run] Shutting down server
+[2026-10-10 09:27:51] [INFO]: [Run] Writing to server console
+[2026-10-10 09:27:51] [ERROR]: [Run] Writing to server console failed: Cannot send input after starting communication
+[2026-10-10 09:28:05] [INFO]: [Run] Shutting down server
+[2026-10-10 09:28:05] [INFO]: [Run] Writing to server console
+[2026-10-10 09:28:05] [ERROR]: [Run] Writing to server console failed: Cannot send input after starting communication
+[2026-10-10 09:28:23] [ERROR]: [Run] Running server jar failed: PyMemoryView_FromBuffer(): info->buf must not be NULL

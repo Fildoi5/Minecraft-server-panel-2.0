@@ -1,0 +1,36 @@
+[2026-10-01 15:11:19] [INFO]: [Start] Hello!
+[2026-10-01 15:11:19] [INFO]: [Start] Server is installed
+[2026-10-01 15:11:19] [INFO]: [Server Data] Loading server data file
+[2026-10-01 15:11:19] [INFO]: [Web] Web is running on: http://127.0.0.1:80
+[2026-10-01 15:11:29] [INFO]: [Web] Password: 1234
+[2026-10-01 15:11:29] [INFO]: [Web] Username: admin
+[2026-10-01 15:11:29] [INFO]: [Web] users: {'admin': '670b1a9fc6c6000ac31f1d6206e85fd5'}
+[2026-10-01 15:11:31] [INFO]: [Run] Running server
+[2026-10-01 15:11:31] [INFO]: [Run] Running server jar from: 'C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java\jdk-27\bin\java.exe'
+[2026-10-01 15:11:31] [INFO]: [Minecraft] b'Starting net.minecraft.server.Main\r\n'
+[2026-10-01 15:11:32] [INFO]: [Minecraft] b'WARNING: A restricted method in java.lang.System has been called\n'
+[2026-10-01 15:11:32] [INFO]: [Minecraft] b'WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/C:/Users/filip/Documents/minecraft-allverisions/minecraft-server-2.0/servers/d/libraries/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar)\n'
+[2026-10-01 15:11:32] [INFO]: [Minecraft] b'WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\n'
+[2026-10-01 15:11:32] [INFO]: [Minecraft] b'WARNING: Restricted methods will be blocked in a future release unless native access is enabled\n'
+[2026-10-01 15:11:32] [INFO]: [Minecraft] b'\r\n'
+[2026-10-01 15:11:34] [INFO]: [Minecraft] b'WARNING: A terminally deprecated method in sun.misc.Unsafe has been called\n'
+[2026-10-01 15:11:34] [INFO]: [Minecraft] b'WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.joml.MemUtil$MemUtilUnsafe (file:/C:/Users/filip/Documents/minecraft-allverisions/minecraft-server-2.0/servers/d/libraries/org/joml/joml/1.10.9/joml-1.10.9.jar)\n'
+[2026-10-01 15:11:34] [INFO]: [Minecraft] b'WARNING: Please consider reporting this to the maintainers of class org.joml.MemUtil$MemUtilUnsafe\n'
+[2026-10-01 15:11:34] [INFO]: [Minecraft] b'WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release\r\n'
+[2026-10-01 15:11:37] [INFO]: [Minecraft] b'[15:11:37] [ServerMain/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]\r\n'
+[2026-10-01 15:11:39] [INFO]: [Minecraft] b'[15:11:39] [Worker-Main-4/INFO]: Loaded 1866 advancements\r\n'
+[2026-10-01 15:11:39] [INFO]: [Minecraft] b'[15:11:39] [Server thread/INFO]: Starting minecraft server version 26.3\r\n'
+[2026-10-01 15:11:39] [INFO]: [Minecraft] b'[15:11:39] [Server thread/INFO]: Loading properties\r\n'
+[2026-10-01 15:11:39] [INFO]: [Minecraft] b'[15:11:39] [Server thread/INFO]: Default game type: SURVIVAL\r\n'
+[2026-10-01 15:11:39] [INFO]: [Minecraft] b'[15:11:39] [Server thread/INFO]: Generating keypair\r\n'
+[2026-10-01 15:11:39] [INFO]: [Minecraft] b'[15:11:39] [Server thread/INFO]: Starting Minecraft server on *:25565\r\n'
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b'[15:11:40] [Server thread/INFO]: Preparing level "world"\r\n'
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b'[15:11:40] [Server thread/INFO]: Loading 0 persistent chunks...\r\n'
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b'[15:11:40] [Server thread/INFO]: Preparing spawn area: 100%\r\n'
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b'[15:11:40] [Server thread/INFO]: Time elapsed: 19 ms\r\n'
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b'[15:11:40] [Server thread/INFO]: Done (0.271s)! For help, type "help"\r\n'
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b"[15:11:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld\r\n"
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b"[15:11:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end\r\n"
+[2026-10-01 15:11:40] [INFO]: [Minecraft] b"[15:11:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether\r\n"
+[2026-10-01 15:12:05] [INFO]: [Run] Shutting down server
+[2026-10-01 15:12:14] [INFO]: [Run] Shutting down server

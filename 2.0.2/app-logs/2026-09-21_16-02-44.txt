@@ -1,0 +1,7 @@
+[2026-09-21 16:02:44] [INFO]: [Start] Hello!
+[2026-09-21 16:02:44] [WARN]: [Start] Server is not installed
+[2026-09-21 16:02:44] [DEBUG]: [Start] ['C:\\Users\\filip\\Documents\\minecraft-allverisions\\minecraft-server-2.0\\.venv\\Scripts\\waitress-serve.exe', '--host', '127.0.0.1', '--call', 'installer:run']
+[2026-09-21 16:02:44] [INFO]: [Config] Loading config file
+[2026-09-21 16:02:44] [INFO]: [Dependencies] Loading dependencies file
+[2026-09-21 16:02:44] [INFO]: [Installer-web] Installer-web is running on: 127.0.0.1:5000
+[2026-09-21 16:04:57] [INFO]: [Ending] Goodbye!

@@ -1,0 +1,12 @@
+[2026-10-08 15:51:13] [INFO]: [Start] Hello!
+[2026-10-08 15:51:13] [INFO]: [Start] Server is installed
+[2026-10-08 15:51:13] [INFO]: [Server Data] Loading server data file
+[2026-10-08 15:51:13] [INFO]: [Web] Web is running on: http://127.0.0.1:80
+[2026-10-08 15:51:20] [INFO]: [Web] Password: 1234
+[2026-10-08 15:51:20] [INFO]: [Web] Username: admin
+[2026-10-08 15:51:20] [INFO]: [Web] users: {'admin': '728f13ca30fbe8c269efe41a30813485'}
+[2026-10-08 15:51:22] [INFO]: [Run] Running server
+[2026-10-08 15:51:22] [INFO]: [Run] Running server jar from: 'C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java\jdk-27\bin\java.exe'
+[2026-10-08 15:51:22] [INFO]: [Minecraft] Starting net.minecraft.server.Main
+[2026-10-08 15:51:22] [ERROR]: [Run] Running server jar failed: 'in <string>' requires string as left operand, not bytes
+[2026-10-08 15:51:51] [INFO]: [Ending] Goodbye!
