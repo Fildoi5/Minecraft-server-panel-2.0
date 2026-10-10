@@ -1,0 +1,8 @@
+[2026-10-01 15:34:11] [INFO]: [Start] Hello!
+[2026-10-01 15:34:11] [INFO]: [Start] Server is installed
+[2026-10-01 15:34:11] [INFO]: [Server Data] Loading server data file
+[2026-10-01 15:34:11] [INFO]: [Web] Web is running on: http://127.0.0.1:80
+[2026-10-01 15:34:17] [INFO]: [Web] Password: 1234
+[2026-10-01 15:34:17] [INFO]: [Web] Username: admin
+[2026-10-01 15:34:17] [INFO]: [Web] users: {'admin': '1295b48f26beafead24ded0bf040f3d4'}
+[2026-10-01 15:35:18] [INFO]: [Ending] Goodbye!

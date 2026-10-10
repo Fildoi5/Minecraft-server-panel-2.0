@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style/main.css">
+    <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon">
+    <title>Minecraft Server Installer</title>
+</head>
+<body>
+    <h1 id="title">Welcome to server installer</h1>
+
+    <main>
+        <div class="container">
+            <h4>ModLoader/Minecraft</h4>
+            <select id="modloader">
+                <option value="vanilla">Vanilla</option>
+                <option value="neoforge">Neoforge</option>
+                <option value="fabric">Fabric</option>
+            </select>
+        </div>
+        
+        <div class="container">
+            <h4>Version</h4>
+            <select id="version"></select>
+        </div>
+        
+        <div class="container">
+            <h4>Ram</h4>
+            <select id="ram">
+                <option value="1.0">1.0 GB</option>
+                <option value="1.5">1.5 GB</option>
+                <option value="2.0">2.0 GB</option>
+                <option value="2.5">2.5 GB</option>
+                <option value="3.0">3.0 GB</option>
+                <option value="3.5">3.5 GB</option>
+                <option value="4.0">4.0 GB</option>
+                <option value="4.5">4.5 GB</option>
+                <option value="5.0">5.0 GB</option>
+                <option value="5.5">5.5 GB</option>
+                <option value="6.0">6.0 GB</option>
+                <option value="6.5">6.5 GB</option>
+                <option value="7.0">7.0 GB</option>
+                <option value="7.5">7.5 GB</option>
+            </select>
+        </div>
+
+        <div class="container">
+            <h4>Java</h4>
+            <select id="java"></select>
+        </div>
+
+        <div class="container">
+            <h4>Server name</h4>
+            <input type="text" id="name">
+        </div>
+
+        <div class="container">
+            <h4>Server motd</h4>
+            <input type="text" id="motd">
+        </div>
+
+        <div class="container">
+            <h4>Icon</h4>
+            <input style="border-width: 0px; background-color: #144272;"  accept=".png" type="file" id="file">
+        </div>
+
+        <div class="container">
+            <h4>Online Mod</h4>
+            <select id="onlinemod">
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+
+        <div class="container">
+            <h4>Difficulty</h4>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="container">
+            <h4>Ip adress</h4>
+            <input type="text" id="ip">
+        </div>
+
+        <div id="submitdiv">
+            <input type="button" id="submit"  value="Submit" onclick="submit()">
+        </div>
+        
+    </main>
+
+    <script src="/static/scripts/main.js"></script>
+</body>
+</html>

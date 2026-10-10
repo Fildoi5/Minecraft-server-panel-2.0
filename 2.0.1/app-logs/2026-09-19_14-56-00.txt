@@ -1,0 +1,11 @@
+[2026-09-19 14:56:00] [INFO]: [Start] Hello!
+[2026-09-19 14:56:00] [WARN]: [Start] Server is not installed
+[2026-09-19 14:56:00] [DEBUG]: [Start] ['C:\\Users\\filip\\Documents\\minecraft-allverisions\\minecraft-server-2.0\\.venv\\Scripts\\waitress-serve.exe', '--host', '127.0.0.1', '--call', 'installer:run']
+[2026-09-19 14:56:00] [INFO]: [Config] Loading config file
+[2026-09-19 14:56:00] [INFO]: [Dependencies] Loading dependencies file
+[2026-09-19 14:56:17] [DEBUG]: [Web-installer] Requested data are: b'{"modloader":"vanilla","version":"Minecraft 26.3","ram":"1.0","java":"Openjdk Java SE 27","name":"d","motd":"d","onlinemod":"True","ip":"d"}'
+[2026-09-19 14:56:17] [INFO]: [Installer-Java] Creating java directory: C:\Users\filip\Documents\minecraft-allverisions\minecraft-server-2.0\java
+[2026-09-19 14:56:17] [INFO]: [Installer-Java] Creating java directory is successful.
+[2026-09-19 14:56:17] [INFO]: [Installer-Java] Downloading java from: 'https://download.java.net/openjdk/jdk27/ri/openjdk-27+35_windows-x64_bin.zip'
+[2026-09-19 14:56:17] [ERROR]: [Installer-Java] Downloading java failed: HTTPSConnectionPool(host='download.java.net', port=443): Max retries exceeded with url: /openjdk/jdk27/ri/openjdk-27+35_windows-x64_bin.zip (Caused by NameResolutionError("HTTPSConnection(host='download.java.net', port=443): Failed to resolve 'download.java.net' ([Errno 11002] getaddrinfo failed)"))
+[2026-09-19 14:57:19] [INFO]: [Ending] Goodbye!
