@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: #0A2647;
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+
+#menu{
+    background-color: #144272;
+    height: 100vh;
+    width: 60px; 
+}
+
+.menu_icon{
+    margin: 9px;
+}
+.menu_icon:hover{
+    filter: opacity(80%);
+}

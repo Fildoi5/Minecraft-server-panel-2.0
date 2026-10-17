@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/settings.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <div id="menu">
+            <img class="menu_icon" id="menu_icon" src="/static/img/menu_icon.png" alt="">
+            <img class="menu_icon" id="logs_icon" src="/static/img/terminal.png" alt="">
+            <img class="menu_icon" id="settings_icon" src="/static/img/settings.png" alt="">
+        </div>
+
+        <div id="content">
+            <h2>Settings</h2>
+
+            <div class="container">
+                <h4>Server startup time</h4>
+
+                <div style="display: flex; gap:50px;">
+                    <div id="days">
+                        <span>Monday:</span>
+                        <span>Tuesday:</span>
+                        <span>Wednesday:</span>
+                        <span>Thursday:</span>
+                        <span>Friday:</span>
+                        <span>Saturday:</span>
+                        <span>Sunday:</span>
+                    </div>
+                    <div id="time">
+                        <input type="time" id="start-monday">
+                        <input type="time" id="start-tuesday">
+                        <input type="time" id="start-wednesday">
+                        <input type="time" id="start-thursday">
+                        <input type="time" id="start-friday">
+                        <input type="time" id="start-saturday">
+                        <input type="time" id="start-sunday">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h4>Server shutdown time</h4>
+
+                <div style="display: flex; gap:50px;">
+                    <div id="days">
+                        <span>Monday:</span>
+                        <span>Tuesday:</span>
+                        <span>Wednesday:</span>
+                        <span>Thursday:</span>
+                        <span>Friday:</span>
+                        <span>Saturday:</span>
+                        <span>Sunday:</span>
+                    </div>
+                    <div id="time">
+                        <input type="time" id="stop-monday" pattern="[0-9]{2}:[0-9]{2}">
+                        <input type="time" id="stop-tuesday">
+                        <input type="time" id="stop-wednesday">
+                        <input type="time" id="stop-thursday">
+                        <input type="time" id="stop-friday">
+                        <input type="time" id="stop-saturday">
+                        <input type="time" id="stop-sunday">
+                    </div>
+                </div>
+            </div>
+            <button id="save" onclick="send()">Save</button>
+    </main>
+
+    <script src="/static/scritps/main.js"></script>
+    <script src="/static/scritps/settings.js"></script>
+</body>
+
+</html>
