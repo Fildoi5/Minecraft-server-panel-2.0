@@ -3,6 +3,7 @@ import requests
 import os
 import shutil
 import sys
+import tarfile
 
 class InstallJava:
     def __init__(self, logger, path, url):
@@ -29,7 +30,7 @@ class InstallJava:
         self.logger.write(f"Downloading java from: '{self.url}'", "INFO", "Installer-Java")
         try:
             data = requests.get(self.url).content
-            with open(os.path.join(self.path, "java.zip"), "wb") as file:
+            with open(os.path.join(self.path, "java"), "wb") as file:
                 file.write(data)
         except Exception as e:
             self.logger.write(f"Downloading java failed: {e}", "ERROR", "Installer-Java")
@@ -37,13 +38,21 @@ class InstallJava:
 
         self.logger.write("Downloading java is successful.", "INFO", "Installer-Java")
 
-        self.extract_java(os.path.join(self.path, "java.zip"))
+        self.extract_java(os.path.join(self.path, "java"))
 
     def extract_java(self,zip_path):
         self.logger.write("Extracting java", "INFO", "Installer-Java")
         try:
-            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(self.path)
+            if sys.platform == "win32":
+                with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                    zip_ref.extractall(self.path)
+            elif sys.platform == "linux":
+                file = tarfile.open(zip_path)
+                file.extractall(self.path)
+                file.close()
+            else:
+                raise "This is other platform then win32 or linux"
+
         except Exception as e:
             self.logger.write(f"Extracting java failed: {e}", "ERROR", "Installer-Java")
             sys.exit()

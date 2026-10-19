@@ -23,7 +23,7 @@ class Installer:
         self.java_path = "" # Java path
 
         self.app = Flask(__name__, static_folder='installer_web/static',template_folder='installer_web/templates') # Flask object
-        self.server = create_server(self.app, host="127.0.0.1", port=80) # Waitress object
+        self.server = create_server(self.app, host="0.0.0.0", port=80) # Waitress object
         self.logger.write("Installer-web is running on: http://127.0.0.1:80", "INFO", "Installer-web") # Write to the log
 
         self.declare_url()
@@ -110,7 +110,11 @@ class Installer:
             # Install MC Server
             for version in self.dependencies["modloader"][data.get("modloader")]:
                 if data.get("version") in version["version"]:
-                    install_server.InstallServer(version["url"],os.path.join(self.config["server_path"],name),self.logger, self.java_path,version["install_command"],name, data.get("ram"),data.get("motd"),data.get("ip"),data.get("onlinemod"),data.get("difficulty"))
+                    if sys.platform == "win32":
+                        install_server.InstallServer(version["url"],os.path.join(self.config["server_path"],name),self.logger, self.java_path,version["install_command"],name, data.get("ram"),data.get("motd"),data.get("ip"),data.get("onlinemod"),data.get("difficulty"),version["run_command_windows"])
+                    elif sys.platform == "linux":
+                        install_server.InstallServer(version["url"],os.path.join(self.config["server_path"],name),self.logger, self.java_path,version["install_command"],name, data.get("ram"),data.get("motd"),data.get("ip"),data.get("onlinemod"),data.get("difficulty"),version["run_command_linux"])
+
                     os.kill(os.getpid(), signal.SIGILL) # Kill install web
 
             self.logger.write(f"The Java version is not in the posted data: {data}", "WARN", "Web-installer")

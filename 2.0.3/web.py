@@ -39,11 +39,14 @@ class Web:
 
         }
 
-        self.run_server_obj = run.Run(self.server_data["path"],["-jar","server.jar"],self.logger, self.server_data["java_path"])
+        # self.run_server_obj = run.Run(self.server_data["path"],[f"-Xmx{self.server_data.get("ram")}G",f"-Xms{self.server_data.get("ram")}G" ,"-jar","server.jar"],self.logger, self.server_data["java_path"])
+
+        args = [f"-Xmx{self.server_data.get("ram")}G",f"-Xms{self.server_data.get("ram")}G"] + self.server_data.get("args")
+        self.run_server_obj = run.Run(self.server_data["path"],args, self.logger, self.server_data["java_path"])
 
         self.app = Flask(__name__, static_folder='main_web/static',template_folder='main_web/templates')
         self.app.secret_key = "%032x" % random.getrandbits(128)
-        self.server = create_server(self.app, host="127.0.0.1", port=80,threads=6)
+        self.server = create_server(self.app, host="0.0.0.0", port=80,threads=6)
         self.logger.write(r"Web is running on: http://127.0.0.1:80", "INFO", "Web")
 
         self.declare_url()
@@ -51,7 +54,9 @@ class Web:
 
     # Run waitress server
     def run(self):
+        self.status["status"] = self.run_server_obj.toogle_run()
         self.server.run()
+
 
     # Load server data
     def load_server_data(self):
@@ -61,7 +66,6 @@ class Web:
                 return json.load(raw_file)
         except Exception as e:
             self.logger.write(f"Loading server data failed: {e}", "ERROR", "Server Data")
-
 
     # Measures RAM and CPU usage
     def get_usage(self):

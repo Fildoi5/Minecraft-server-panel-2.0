@@ -8,15 +8,21 @@ import properties
 
 
 class InstallServer:
-    def __init__(self, url, path, logger, javapath, command, name, ram, motd, ip, onlinemode,difficulty):
+    def __init__(self, url, path, logger, javapath, command, name, ram, motd, ip, onlinemode,difficulty,run_args):
         self.url = url  # Url to download server.jar
         self.path = os.path.join(os.getcwd(), path)  # Path to server
         self.logger = logger  # Logger object
-        self.javapath = os.path.join(javapath, "bin", "java.exe")  # Path to java
+        self.javapath = None
+
+        if sys.platform == "win32":
+            self.javapath = os.path.join(javapath, "bin", "java.exe")  # Path to java
+        elif sys.platform == "linux":
+            self.javapath = os.path.join(javapath, "bin", "java")  # Path to java
+
         self.command = command
         self.runcode = 0
         self.name = name  # Server name
-        self.args = []
+        self.args = run_args
         self.ram = ram  # Server ram
         self.motd = motd  # Server motd
         self.ip = ip  # Server ip
@@ -75,7 +81,7 @@ class InstallServer:
                 "name": self.name,
                 "path": self.path,
                 "java_path": self.javapath,
-                "command": self.args,
+                "args": self.args,
                 "ram": self.ram,
                 "motd": self.motd,
                 "ip": self.ip,

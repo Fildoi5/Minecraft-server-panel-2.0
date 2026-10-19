@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    gap: 50px;
+    width: calc(100vw - 60px - 100px);
+    justify-content: center;
+}
+
+button{
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+button:hover{
+    filter: opacity(80%);
+}
+

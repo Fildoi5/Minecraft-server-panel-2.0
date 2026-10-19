@@ -25,12 +25,12 @@
   "modloader": {
     "vanilla": [{"version":"Minecraft 26.3", "url": "https://piston-data.mojang.com/v1/objects/33680f5f2ac32864d6d7cf5e56a705fdb3e05f4c/server.jar", "install_command": "", "run_command_linux": ["-jar", "server.jar"],"run_command_windows": ["-jar", "server.jar"]}],
     "neoforge": [
-      {"version": "Neoforge(21.1.250) 1.21.1", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.250/neoforge-21.1.250-installer.jar", "install_command": "-installServer", "run_command_linux": [" @libraries/net/neoforged/neoforge/21.1.250/unix_args.txt","$@"],"run_command_windows": ["@user_jvm_args.txt", "@libraries/net/neoforged/neoforge/21.1.250/win_args.txt","%*"]},
-      {"version": "Neoforge(21.11.45) 1.21.11", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.11.45/neoforge-21.11.45-installer.jar", "install_command": "-installServer"},
-      {"version": "Neoforge(26.3.0.3-beta) 26.3", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/26.3.0.3-beta/neoforge-26.3.0.3-beta-installer.jar", "install_command": "-installServer"}
+      {"version": "Neoforge(21.1.250) 1.21.1", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.250/neoforge-21.1.250-installer.jar", "install_command": "-installServer", "run_command_linux": ["@libraries/net/neoforged/neoforge/21.1.250/unix_args.txt","$@"],"run_command_windows": ["@libraries/net/neoforged/neoforge/21.1.250/win_args.txt","%*"]},
+      {"version": "Neoforge(21.11.45) 1.21.11", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.11.45/neoforge-21.11.45-installer.jar", "install_command": "-installServer", "run_command_linux": ["@libraries/net/neoforged/neoforge/21.11.45/unix_args.txt","$@"],"run_command_windows": ["@libraries/net/neoforged/neoforge/21.11.45/win_args.txt","%*"]},
+      {"version": "Neoforge(26.3.0.3-beta) 26.3", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/26.3.0.3-beta/neoforge-26.3.0.3-beta-installer.jar", "install_command": "-installServer", "run_command_linux": ["@libraries/net/neoforged/neoforge/26.3.0.3-beta/unix_args.txt","$@"],"run_command_windows": ["@libraries/net/neoforged/neoforge/26.3.0.3-beta/win_args.txt","%*"]}
     ],
     "fabric": [
-      {"version": "Fabric(0.19.5) 1.20.1", "url": "https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.19.5/1.1.2/server/jar", "install_command": ""}
+      {"version": "Fabric(0.19.5) 1.20.1", "url": "https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.19.5/1.1.2/server/jar", "install_command": "", "run_command_linux": ["-jar", "server.jar"],"run_command_windows": ["-jar", "server.jar"]}
     ]
   }
 }

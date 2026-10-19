@@ -26,13 +26,15 @@ class Run:
             for i in self.arguments:
                 args.append(i)
 
+            self.logger.write(f"Run args: '{args}'", "DEBUG", "Run")  # Write to the log
+
 
             self.process = subprocess.Popen(args,cwd=self.path, stdin=subprocess.PIPE ,stdout=subprocess.PIPE, stderr=subprocess.STDOUT) # Create process
 
             # Read stdout
             for line in self.process.stdout:
-                self.logger.write(line.decode("ascii").replace("\n", ""), "INFO", "Minecraft")# Write every line to the log
-                if "Preparing spawn area: 100%" in line.decode("ascii"):
+                self.logger.write(line.decode('utf-8').replace("\n", ""), "INFO", "Minecraft")# Write every line to the log
+                if "Preparing spawn area: 100%" in line.decode('utf-8'):
                     self.runnning = True
 
             returncode = self.process.wait()

@@ -1,0 +1,36 @@
+{
+  "java": [
+    {"version": "Openjdk Java SE 27","win32": "https://download.java.net/openjdk/jdk27/ri/openjdk-27+35_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk27/ri/openjdk-27+35_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 26","win32": "https://download.java.net/openjdk/jdk26/ri/openjdk-26+35_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk26/ri/openjdk-26+35_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 25","win32": "https://download.java.net/openjdk/jdk25/ri/openjdk-25+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk25/ri/openjdk-25+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 24","win32": "https://download.java.net/openjdk/jdk24/ri/openjdk-24+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk24/ri/openjdk-24+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 23","win32": "https://download.java.net/openjdk/jdk23/ri/openjdk-23+37_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk23/ri/openjdk-23+37_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 22","win32": "https://download.java.net/openjdk/jdk22/ri/openjdk-22+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk22/ri/openjdk-22+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 21","win32": "https://download.java.net/openjdk/jdk21/ri/openjdk-21+35_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk21/ri/openjdk-21+35_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 20","win32": "https://download.java.net/openjdk/jdk20/ri/openjdk-20+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk20/ri/openjdk-20+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 19","win32": "https://download.java.net/openjdk/jdk19/ri/openjdk-19+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk19/ri/openjdk-19+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 18","win32": "https://download.java.net/openjdk/jdk18/ri/openjdk-18+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk18/ri/openjdk-18+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 17","win32": "https://download.java.net/openjdk/jdk17.0.0.1/ri/openjdk-17.0.0.1+2_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk17.0.0.1/ri/openjdk-17.0.0.1+2_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 16","win32": "https://download.java.net/openjdk/jdk16/ri/openjdk-16+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk16/ri/openjdk-16+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 15","win32": "https://download.java.net/openjdk/jdk15/ri/openjdk-15+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk15/ri/openjdk-15+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 14","win32": "https://download.java.net/openjdk/jdk14/ri/openjdk-14+36_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk14/ri/openjdk-14+36_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 13","win32": "https://download.java.net/openjdk/jdk13/ri/openjdk-13+33_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk13/ri/openjdk-13+33_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 12","win32": "https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_windows-x64_bin.zip", "linux": "https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz" },
+    {"version": "Openjdk Java SE 11","win32": "https://download.java.net/openjdk/jdk11.0.0.2/ri/openjdk-11.0.0.2_windows-x64.zip", "linux": "https://download.java.net/openjdk/jdk11.0.0.2/ri/openjdk-11.0.0.2_linux-x64.tar.gz" },
+    {"version": "Openjdk Java SE 10","win32": "https://download.java.net/openjdk/jdk10/ri/jdk-10+44_windows-x64_bin_ri.tar.gz", "linux": "https://download.java.net/openjdk/jdk10/ri/jdk-10_linux-x64_bin_ri.tar.gz" },
+    {"version": "Openjdk Java SE 9","win32": "https://download.java.net/openjdk/jdk9/ri/jdk-9+181_windows-x64_ri.zip", "linux": "https://download.java.net/openjdk/jdk9/ri/jdk-9+181_linux-x64_ri.zip" },
+    {"version": "Openjdk Java SE 8","win32": "https://download.java.net/openjdk/jdk8u44/ri/openjdk-8u44-windows-i586.zip", "linux": "https://download.java.net/openjdk/jdk8u44/ri/openjdk-8u44-linux-x64.tar.gz" },
+    {"version": "Openjdk Java SE 7","win32": "https://download.java.net/openjdk/jdk7u75/ri/jdk_ri-7u75-b13-windows-i586-18_dec_2014.zip", "linux": "https://download.java.net/openjdk/jdk7u75/ri/jdk_ri-7u75-b13-linux-x64-18_dec_2014.tar.gz" }
+  ],
+  "modloader": {
+    "vanilla": [{"version":"Minecraft 26.3", "url": "https://piston-data.mojang.com/v1/objects/33680f5f2ac32864d6d7cf5e56a705fdb3e05f4c/server.jar", "install_command": "", "run_command_linux": ["-jar", "server.jar"],"run_command_windows": ["-jar", "server.jar"]}],
+    "neoforge": [
+      {"version": "Neoforge(21.1.250) 1.21.1", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.250/neoforge-21.1.250-installer.jar", "install_command": "-installServer", "run_command_linux": ["@libraries/net/neoforged/neoforge/21.1.250/unix_args.txt","$@"],"run_command_windows": ["@libraries/net/neoforged/neoforge/21.1.250/win_args.txt","%*"]},
+      {"version": "Neoforge(21.11.45) 1.21.11", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.11.45/neoforge-21.11.45-installer.jar", "install_command": "-installServer", "run_command_linux": ["@libraries/net/neoforged/neoforge/21.11.45/unix_args.txt","$@"],"run_command_windows": ["@libraries/net/neoforged/neoforge/21.11.45/win_args.txt","%*"]},
+      {"version": "Neoforge(26.3.0.3-beta) 26.3", "url": "https://maven.neoforged.net/releases/net/neoforged/neoforge/26.3.0.3-beta/neoforge-26.3.0.3-beta-installer.jar", "install_command": "-installServer", "run_command_linux": ["@libraries/net/neoforged/neoforge/26.3.0.3-beta/unix_args.txt","$@"],"run_command_windows": ["@libraries/net/neoforged/neoforge/26.3.0.3-beta/win_args.txt","%*"]}
+    ],
+    "fabric": [
+      {"version": "Fabric(0.19.5) 1.20.1", "url": "https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.19.5/1.1.2/server/jar", "install_command": "", "run_command_linux": ["-jar", "server.jar"],"run_command_windows": ["-jar", "server.jar"]}
+    ]
+  }
+}

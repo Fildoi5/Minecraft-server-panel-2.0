@@ -1,0 +1,1 @@
+If you want to run it, you must first enter the command: chmod u+x Mcs_panel
