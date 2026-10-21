@@ -1,5 +1,4 @@
 import json
-import sys
 import threading
 import random
 import time
@@ -40,9 +39,10 @@ class Web:
 
         }
 
-        self.run_args = [f"-Xmx{self.server_data.get("ram")}G",
-                         f"-Xms{self.server_data.get("ram")}G"] + self.server_data.get("args")
-        self.run_server_obj = run.Run(self.server_data["path"],self.run_args, self.logger, self.server_data["java_path"])
+        # self.run_server_obj = run.Run(self.server_data["path"],[f"-Xmx{self.server_data.get("ram")}G",f"-Xms{self.server_data.get("ram")}G" ,"-jar","server.jar"],self.logger, self.server_data["java_path"])
+
+        args = [f"-Xmx{self.server_data.get("ram")}G",f"-Xms{self.server_data.get("ram")}G"] + self.server_data.get("args")
+        self.run_server_obj = run.Run(self.server_data["path"],args, self.logger, self.server_data["java_path"])
 
         self.app = Flask(__name__, static_folder='main_web/static',template_folder='main_web/templates')
         self.app.secret_key = "%032x" % random.getrandbits(128)
