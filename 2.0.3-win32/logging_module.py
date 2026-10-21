@@ -1,5 +1,8 @@
 import os
 import datetime
+import shutil
+import get_non_root_user
+
 
 class Logging:
     def __init__(self, debug, wb=None, process="All"):
@@ -7,6 +10,7 @@ class Logging:
         self.log_name = str(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) + ".txt" # Vytvoření jména log souboru
         self.wb = wb
         self.process = process
+        self.get_non = get_non_root_user.NonRoot(self)
 
         # Terminal colors
         self.RED = '\033[31m'
@@ -42,6 +46,14 @@ class Logging:
             else:
                 if not os.path.exists(path_directory):
                     os.mkdir(path_directory)
+
+                    usr = self.get_non.get_usr()
+
+                    if usr is None:
+                        raise Exception("The user.usr is empty!")
+                    elif usr.strip() != "":
+                        shutil.chown(path_directory, user=None, group=None)
+
                 with open(path, "w") as log:
                     log.write(f"[{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] [{type_of_log}]: [{caller}] {content}\n") # Zapsání do logu
                     print(f"[{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] [{type_of_log}]: [{caller}] {content}")
