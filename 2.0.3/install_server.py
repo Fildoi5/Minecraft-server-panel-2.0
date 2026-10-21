@@ -130,37 +130,10 @@ class InstallServer:
         self.set_server_data()
         self.set_server_properties()
 
-    def create_args(self):
-        try:
-            self.logger.write("Creating args", "INFO", "Server-Installer (create_args())") # Write to the log
-            path = os.path.join(os.getcwd(),"user.usr")
-            if sys.platform == "linux":
-                if os.path.exists(path):
-                    with open(path, "r") as file:
-                        text = file.read()
-                        if text.strip() != "":
-                            return ["sudo","-u", text.strip()]
-                        else:
-                            return None
-                else:
-                    self.logger.write("user.usr doesn´t exist", "WARN", "Server-Installer (create_args())")  # Write to the log
-                    with open(path, "w") as file:
-                        file.write("")
-                    return None
-
-            else:
-                return []
-
-        except Exception as e:
-            self.logger.write("Creating args failed", "ERROR", "Server-Installer (create_args())")  # Write to the log
-
     def runthread(self):
         try:
-            larg = self.create_args()
-            if larg is None:
-                raise Exception("The user.usr is empty!")
 
-            process = subprocess.Popen(larg + [self.javapath, "-jar", os.path.join(self.path, "server.jar"), self.command],
+            process = subprocess.Popen([self.javapath, "-jar", os.path.join(self.path, "server.jar"), self.command],
                                        cwd=self.path, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
             for line in process.stdout:

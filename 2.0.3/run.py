@@ -1,5 +1,3 @@
-import os.path
-import sys
 import threading
 import subprocess
 
@@ -19,29 +17,12 @@ class Run:
         thread = threading.Thread(target=self.runthread) # Server process thread
         thread.start() # Run thread
 
-    def create_args(self):
-        try:
-            self.logger.write("Creating args", "INFO", "Run (create_args())") # Write to the log
-
-            if sys.platform == "linux":
-                with open(os.path.join(os.getcwd(),"user.usr"), "r") as file:
-                    text = file.read()
-                    if text.strip() != "":
-                        return ["sudo","-u", text.strip()]
-                    else:
-                        return []
-            else:
-                return []
-        except Exception as e:
-            self.logger.write("Creating args failed", "ERROR", "Run (create_args())")  # Write to the log
-
     def runthread(self):
         try:
             self.logger.write(f"Running server jar from: '{self.javapath}'", "INFO", "Run") # Write to the log
             self.runnning = True
 
-            # Set arguments
-            args = self.create_args() + [self.javapath]
+            args = [self.javapath]
             for i in self.arguments:
                 args.append(i)
 
